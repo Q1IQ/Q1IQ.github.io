@@ -32,10 +32,10 @@ pwntools禁用对我这种fw pwn手来说，没了pwntools就是没了胳膊，�
 <p><img src="https://qiiq-1258887625.cos.ap-chengdu.myqcloud.com/20210323190222.png" alt=""></p>
 <p>也可以直接执行从选手那传过来的二进制，但是要直接执行的话怎么也得弄个沙箱吧，万一选手整了个什么了不得的东西，而且开销很大。</p>
 <p>还有种办法是在选手服务器那边执行下看看进程堆内存，大概可行？但总感觉动选手的环境不应该是checker干的事，而且还是加一个进程进去，不过已经是能想到的比较可行的方案了。</p>
-<p>然后我也看了Flappypig战队提出来的这个[lowbits leak check][<a href="https://www.anquanke.com/post/id/105387#h3-7]，但是关键就在于：" target="_blank" rel="noopener">https://www.anquanke.com/post/id/105387#h3-7]，但是关键就在于：</a></p>
-<blockquote>
-<p>那么这就给了我们在CTF线下赛中一种针对堆漏洞的Checker的思路，我们在程序交互中预先在每次malloc后，把堆地址的低12bit输出。</p>
-</blockquote>
+<p>然后我也看了Flappypig战队提出来的这个<a href="https://www.anquanke.com/post/id/105387#h3-7" target="_blank" rel="noopener">lowbits leak check</a>，但是关键就在于：</p>
+<ul>
+<li>那么这就给了我们在CTF线下赛中一种针对堆漏洞的Checker的思路，我们在程序交互中预先在每次malloc后，把堆地址的低12bit输出。</li>
+</ul>
 <p>我太懒了，我懒得改我费老劲出的题，我就想把checker改了交差。</p>
 <p>。。。</p>
 <p>所以为啥好多awd pwn都要求选手提供patch好的文件给主办方帮你替换，人工看的话是一件多方便的事情。</p>
